@@ -5,15 +5,17 @@ import galleryImg04 from '../../assets/images/gallery-04.jpg'
 import galleryImg05 from '../../assets/images/gallery-05.jpg'
 import galleryImg06 from '../../assets/images/gallery-06.jpg'
 import galleryImg07 from '../../assets/images/gallery-07.jpg'
+import galleryImg08 from '../../assets/images/gallery-08.jpg'
 
 const gallertyImages =[
-    galleryImg01, 
-    galleryImg02, 
+    galleryImg06, 
+    galleryImg05, 
     galleryImg03, 
     galleryImg04, 
-    galleryImg05, 
-    galleryImg06, 
-    galleryImg07
+    galleryImg07, 
+    galleryImg02, 
+    galleryImg08,
+    galleryImg01
 ]
 
 export default gallertyImages
