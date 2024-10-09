@@ -1,0 +1,57 @@
+.search_bar {
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    width: max-content;
+    margin-top: 50px;
+}
+
+.form__group {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Khoảng cách giữa icon và input */
+}
+
+.form__group span {
+    font-size: 1.8rem;
+    color: #ee6e6e;
+}
+
+.form__group input {
+    border: none;
+    font-size: 0.9rem;
+    color: var(--heading-color);
+    font-weight: 500;
+    padding-left: 5px;
+}
+
+.form__group input:focus {
+    outline: none;
+}
+
+.form__group h6 {
+    margin-bottom: 0;
+    font-size: 0.85rem;
+    color: var(--text-color);
+}
+
+.form__group-fast {
+    border-right: 2px solid #ddd;
+    padding-right: 15px;
+}
+
+.form__group-last {
+    padding-right: 0;
+}
+
+.search__icon {
+    cursor: pointer;
+}
+
+.search__icon i {
+    font-size: 1.6rem;
+    padding: 0.5rem;
+    background: var(--secondary-color);
+    color: #fff;
+    border-radius: 10px 5px 10px 5px;
+}
