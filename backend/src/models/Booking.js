@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const bookingSchema = new mongoose.Schema(
   {
     userId: {
-      type: String
+      type: String,
     },
     userEmail: {
       type: String,
@@ -25,7 +25,7 @@ const bookingSchema = new mongoose.Schema(
       required: true,
     },
     bookAt: {
-      type: Date
+      type: Date,
     },
   },
   { timestamps: true }

@@ -1,60 +1,60 @@
-.tour__content img{
+.tour__content img {
     width: 100%;
     border-radius: 0.5rem;
     margin-bottom: 2.5rem;
-}
-
-.tour__info,
-.tour__reviews{
-    padding: 2rem;
+  }
+  
+  .tour__info,
+  .tour__reviews {
     border-radius: 0.5rem;
     border: 1px solid rgb(229, 231, 235);
-}
-
-.tour__info h2{
+    padding: 2rem;
+  }
+  
+  .tour__info h2 {
     font-size: 1.5rem;
-}
-
-.tour__info span{
+  }
+  
+  .tour__info span {
     display: flex;
     align-items: center;
     column-gap: 0.5rem;
-    font-style: 1rem;
+    font-size: 1rem;
     color: var(--text-color);
-}
-
-.tour__info span i{
+  }
+  
+  .tour__info span i {
     color: var(--heading-color);
     font-size: 1.1rem;
-}
-
-.tour__extra-details{
+  }
+  
+  .tour__extra-details {
     display: flex;
     align-items: center;
     column-gap: 2.7rem;
     margin-top: 1rem;
     margin-bottom: 2.5rem;
-}
-
-.tour__info p{
+  }
+  
+  .tour__info p {
     line-height: 30px;
     font-size: 1rem;
     color: var(--text-color);
-}
-
-.rating__group span{
+  }
+  
+  .rating__group span {
     font-size: 1.1rem;
     display: flex;
     align-items: center;
     color: var(--secondary-color);
     cursor: pointer;
-}
-
-.tour__reviews h4{
+  }
+  
+  .tour__reviews h4 {
     margin-bottom: 3rem;
-}
-
-.review__input{
+  }
+  
+  .review__input {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -62,56 +62,93 @@
     padding: 0.7rem;
     border-radius: 2rem;
     border: 1px solid var(--secondary-color);
-}
-
-.review__input input{
+  }
+  
+  .review__input input {
     width: 100%;
     padding: 0.5rem 0;
     border: none;
-}
-
-.review__input input:focus{
+  }
+  
+  .review__input input:focus {
     outline: none;
-}
-
-.review__item{
+  }
+  
+  .review__item {
     display: flex;
     align-items: center;
     column-gap: 1rem;
     margin-bottom: 2rem;
-}
-
-.review__item img{
+  }
+  
+  .review__item img {
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 50px;
     object-fit: cover;
-}
-
-.user__reviews{
+  }
+  
+  .user__reviews {
     margin-top: 2.5rem;
-}
-
-.review__item h5{
+  }
+  
+  .review__item h5 {
     font-size: 1rem;
     margin-bottom: 0;
-}
-
-.review__item p{
+  }
+  
+  .review__item p {
     font-size: 0.9rem;
     color: var(--text-color);
-}
-
-.review__item h6{
+  }
+  
+  .review__item h6 {
     font-size: 1.1rem;
     color: var(--text-color);
-}
-
-.review__item span i{
+  }
+  
+  .review__item span i {
     font-size: 1.2rem;
     color: var(--secondary-color);
+  }
+  
+  .review__item span {
+    font-weight: 500;
+  }
+  /* Existing styles remain the same */
+
+@media (max-width: 1024px) {
+  .tour__content img {
+    height: 350px;
+  }
 }
 
-.review__item span{
-    font-weight: 500;
+@media (max-width: 768px) {
+  .tour__content img {
+    height: 300px;
+  }
+  
+  .tour__info h2 {
+    font-size: 1.5rem;
+  }
+  
+  .tour__extra-details {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tour__content img {
+    height: 200px;
+  }
+  
+  .tour__info,
+  .tour__reviews {
+    padding: 1rem;
+  }
+  
+  .tour__info h2 {
+    font-size: 1.2rem;
+  }
 }

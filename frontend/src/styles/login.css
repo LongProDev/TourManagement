@@ -78,3 +78,38 @@
     margin-left: 5px;
     font-weight: 500;
 }
+
+/* Existing styles remain the same */
+
+@media (max-width: 1024px) {
+    .login__container {
+      width: 85%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .login__container {
+      width: 100%;
+      flex-direction: column;
+    }
+    
+    .login__img {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+    
+    .login__form {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .login__form h2 {
+      font-size: 1.5rem;
+    }
+    
+    .login__form input {
+      font-size: 0.9rem;
+    }
+  }

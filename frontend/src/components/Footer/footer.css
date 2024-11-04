@@ -38,3 +38,48 @@
     color: var(--text-color);
     font-size: 1rem;
 }
+
+/* Existing styles remain the same */
+
+@media (max-width: 1024px) {
+    .footer .logo img {
+        width: 40%;
+    }
+    
+    .social__links span a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+
+    .footer .logo img {
+        width: 35%;
+    }
+
+    .footer__quick-links h6 {
+        font-size: 0.9rem;
+    }
+
+    .footer__quick-links li a {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer .logo img {
+        width: 30%;
+    }
+
+    .footer__quick-links {
+        margin-top: 1rem;
+    }
+
+    .copyright {
+        font-size: 0.8rem;
+    }
+}

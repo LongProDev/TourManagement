@@ -1,11 +1,11 @@
-import React from 'react';
-import galleryImages from './galleryImages';
-import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
+import React from "react";
+import galleryImages from "./galleryImages";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 const MasonryImagesGallery = () => {
   return (
-    <ResponsiveMasonry columnsCountBreakPoints={{350: 2, 768: 3, 992: 4}}>
-      <Masonry gutter="0.5rem"> 
+    <ResponsiveMasonry columnsCountBreakPoints={{ 350: 2, 768: 3, 992: 4 }}>
+      <Masonry gutter="0.5rem">
         {galleryImages.map((item, index) => (
           <img
             className="masonry__img"
@@ -13,10 +13,10 @@ const MasonryImagesGallery = () => {
             key={index}
             alt=""
             style={{
-              width: '100%',
-              display: 'block',
-              borderRadius: '10px',
-              objectFit: 'cover' 
+              width: "100%",
+              display: "block",
+              borderRadius: "10px",
+              objectFit: "cover",
             }}
           />
         ))}
