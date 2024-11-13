@@ -4,12 +4,39 @@
   line-height: 80px;
 }
 
+.nav__wrapper {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+.logo {
+  width: 25%;
+}
+
 .logo img {
-  width: 150px;
+  width: 30%;
+}
+
+.navigation {
+  width: 50%;
+}
+
+.nav__right {
+  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
 }
 
 .menu {
   margin-bottom: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.7rem;
 }
 
 .nav__item a {
@@ -31,6 +58,7 @@
   font-size: 1.3rem;
   color: var(--heading-color);
   display: none;
+  cursor: pointer;
 }
 
 .sticky__header {
@@ -45,105 +73,83 @@
   z-index: 999;
 }
 
-/* Common styles for the menu across all devices */
-.navigation {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 25%; /* Set to 1/4 of the screen */
-  height: auto;
-  background: #fff;
-  z-index: 999;
-  transition: 0.3s ease;
-  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
-  display: none;
-}
+@media only screen and (max-width: 992px) {
+  .logo {
+    width: 30%;
+  }
 
-.show__menu {
-  display: block;
-  right: 0;
-}
+  .logo img {
+    width: 50%;
+  }
 
-.menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 2rem;
-}
+  .navigation {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+    display: none;
+  }
 
-.nav__item {
-  margin-bottom: 1rem;
-}
+  .menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background: #fff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    z-index: 1000;
+  }
 
-/* Tablet and smaller desktop screens */
-@media only screen and (max-width: 1024px) {
+  .show__menu {
+    display: block !important;
+  }
+
   .mobile__menu {
     display: block;
   }
 
-  .navigation {
-    width: 30%; /* Slightly wider for tablets */
-  }
-}
-
-/* Larger phones and small tablets */
-@media only screen and (max-width: 768px) {
-  .logo img {
-    width: 120px;
+  .nav__right {
+    width: 70%;
+    justify-content: flex-end;
   }
 
-  .nav__btns {
+  .nav__right .nav__btns {
     display: none;
   }
 
-  .navigation {
-    width: 40%; /* Wider for smaller tablets */
+  .menu .nav__btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .nav__item {
+    width: 100%;
+    text-align: center;
   }
 }
 
-/* Most phones */
-@media only screen and (max-width: 576px) {
-  .logo img {
-    width: 100px;
-  }
-
-  .navigation {
-    width: 50%; /* Half screen for phones */
-  }
-}
-
-/* Smaller phones */
-@media only screen and (max-width: 375px) {
-  .header {
-    height: 60px;
-    line-height: 60px;
+@media only screen and (max-width: 768px) {
+  .logo {
+    width: 40%;
   }
 
   .logo img {
-    width: 80px;
+    width: 60%;
   }
 
-  .mobile__menu {
-    font-size: 1.1rem;
+  .nav__right .nav__btns {
+    display: none;
   }
 
-  .navigation {
-    width: 70%; /* Larger portion for very small screens */
-  }
-}
-
-/* Very small phones */
-@media only screen and (max-width: 320px) {
-  .logo img {
-    width: 70px;
-  }
-
-  .menu {
-    padding: 1.5rem;
-  }
-
-  .navigation {
-    width: 80%; /* Almost full width for extremely small screens */
-  }
+  
 }

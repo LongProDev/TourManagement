@@ -49,12 +49,13 @@ export const deleteTour = async (req, res) => {
   const id = req.params.id;
 
   try {
-    await Tour.findByIdAndUpdate(id);
+    const tour = await Tour.findByIdAndDelete(id);
+    if (!tour) {
+      return res.status(404).json({ success: false, message: "Tour not found" });
+    }
     res.status(200).json({ success: true, message: "Successfully deleted" });
   } catch (err) {
-    res
-      .status(500)
-      .json({ success: false, message: "Failed to delete. Try again" });
+    res.status(500).json({ success: false, message: "Failed to delete. Try again" });
   }
 };
 

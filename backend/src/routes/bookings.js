@@ -1,5 +1,5 @@
 import express from "express";
-import { verifyAdmin, verifyUser } from "../../utils/verifyToken.js";
+import { verifyAdmin, verifyUser } from "../utils/verifyToken.js";
 import {
   createBooking,
   getAllBooking,

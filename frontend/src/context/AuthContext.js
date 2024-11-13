@@ -8,12 +8,12 @@ const initial_state = {
 
 export const AuthContext = createContext(initial_state);
 
-const AuthReducer = (state, action) => {
+export const AuthReducer = (state, action) => {
   switch (action.type) {
     case "LOGIN_START":
       return {
         user: null,
-        loading: true, // Changed to true while login is in progress
+        loading: true,
         error: null,
       };
     case "LOGIN_SUCCESS":
@@ -28,14 +28,7 @@ const AuthReducer = (state, action) => {
         loading: false,
         error: action.payload,
       };
-    case "REGISTER_SUCCESS":
-      return {
-        user: null,
-        loading: false,
-        error: null,
-      };
     case "LOGOUT":
-      localStorage.removeItem('user'); // Add this line to clear localStorage on logout
       return {
         user: null,
         loading: false,
