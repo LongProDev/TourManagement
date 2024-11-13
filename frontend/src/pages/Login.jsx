@@ -40,7 +40,12 @@ const Login = () => {
       if (!res.ok) alert(result.message);
 
       dispatch({ type: 'LOGIN_SUCCESS', payload: result.data });
-      navigate('/');
+
+      if (result.role === 'admin') {
+        navigate('/admin'); 
+      } else {
+        navigate('/'); 
+      }
     } catch (err) {
       dispatch({ type: 'LOGIN_FAILURE', payload: err.message });
     }
